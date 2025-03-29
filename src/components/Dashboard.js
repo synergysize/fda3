@@ -49,7 +49,7 @@ const StatCard = ({ title, value, icon, accentColor, helpText }) => {
         transition="all 0.3s ease"
       >
         <Flex justifyContent="space-between">
-          <Box>
+          <Stat> {/* <-- Add this wrapper */}
             <StatLabel color="gray.400" fontSize="sm">{title}</StatLabel>
             <StatNumber fontSize="2xl" fontWeight="bold" mt={2}>
               {value}
@@ -59,7 +59,7 @@ const StatCard = ({ title, value, icon, accentColor, helpText }) => {
                 {helpText}
               </StatHelpText>
             )}
-          </Box>
+          </Stat> {/* <-- Close the wrapper here */}
           <Box
             p={2}
             borderRadius="md"
